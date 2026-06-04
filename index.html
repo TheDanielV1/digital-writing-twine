@@ -40,7 +40,27 @@ tw-passage img {
   margin-left: auto;
   margin-right: auto;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Apartment" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="Apartment" position="650,275" size="100,100">(set: $time to 17)
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 6px;
+    justify-content: center;
+}
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-button tw-link {
+    display: inline-block;
+    padding: 3px 6px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 13px;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Apartment" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="Apartment" position="650,275" size="100,100">(set: $time to 14)
 
 &lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
@@ -83,14 +103,14 @@ You look over and your heart sinks, staring at the contact on the screen - &quot
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Answer call&quot;)
     ]
 ]
 
 (live: 10s)[
     (go-to: &quot;Keep it a secret&quot;)
 ]
-</tw-passagedata><tw-passagedata pid="5" name="Keep it a secret" tags="Apartment" position="975,275" size="100,100">
+</tw-passagedata><tw-passagedata pid="5" name="Keep it a secret" tags="Apartment" position="950,275" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
 You let the call ring out, seeing the small text telling you know message was left. if thats the case, it must not have been important. Besides, you think its best that the last time you spend with your family isn&#39;t them in hysteria over the fact your going to die. you close your heart to the scenario &#39;//thats not how I want to spend my last day//&#39;. 
@@ -104,13 +124,13 @@ You let the call ring out, seeing the small text telling you know message was le
         (goto: &quot;House&quot;)
     ]
 ]
-Time remaining: $time hours</tw-passagedata><tw-passagedata pid="6" name="Truth" tags="" position="375,400" size="100,100">
-you tell her the truth
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="6" name="Truth" tags="" position="375,575" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
-Time remaining: $time hours
+After thinking it over, you decide to tell him. For all his faults, he’s your father, and you can’t think about leaving him, your mother and the rest of your family without letting them know you won’t see them again. It takes you a while to find the correct words, the best way to explain this nearly unexplainable situation, but the more you talk the less he protests and begins to listen. After you finish, a long silence fills, broken up by the barely audible sound of stifled sobs. “we’ll be there in an hour, okay?”. 
+“Ok, see you then”.  Looks like you’ll be spending your last day with family, and you wouldn’t have it any other way. 
 
-(link: &quot;Love you,see you soon &quot;)[
-    (set: $time to $time - 2)
+(link: &quot;Now to figure out what to do in the meantime&quot;)[
+    (set: $time to $time - 0.5)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
@@ -118,148 +138,145 @@ Time remaining: $time hours
         (goto: &quot;Family Route: Waiting&quot;)
     ]
 ]
-</tw-passagedata><tw-passagedata pid="7" name="Family Route: Waiting" tags="" position="375,525" size="100,100">
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="7" name="Family Route: Waiting" tags="" position="375,700" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
-waiting to family arrive 
-
-[[Wait 1]]
-
-[[Wait 2]]
-
-[[Wait 3]]
-
-[[Wait 4]]
-
-[[Wait 5]]</tw-passagedata><tw-passagedata pid="8" name="Wait 1" tags="" position="225,675" size="100,100">
-option 1 
-
-Time remaining: $time hours&#39;&#39;
-
-
-(link: &quot;I heard a knock from the door&quot;)[
-    (set: $time to $time - 10)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Family Arrives&quot;)
-    ]
-]
-</tw-passagedata><tw-passagedata pid="9" name="Wait 2" tags="" position="375,675" size="100,100">option 2
-Time remaining: $time hours
-
-
-(link: &quot;I heard a knock from the door&quot;)[
-    (set: $time to $time - 10)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Family Arrives&quot;)
-    ]
-]
-</tw-passagedata><tw-passagedata pid="10" name="Wait 3" tags="" position="500,675" size="100,100">
-option 3
-
-Time remaining: $time hours
-
-
-(link: &quot;I heard a knock from the door&quot;)[
-    (set: $time to $time - 10)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Family Arrives&quot;)
-    ]
-]
-</tw-passagedata><tw-passagedata pid="11" name="Wait 4" tags="" position="625,675" size="100,100">
-option 4
-
-Time remaining: $time hours
-
-
-(link: &quot;I heard a knock from the door&quot;)[
-    (set: $time to $time - 10)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Family Arrives&quot;)
-    ]
-]
-</tw-passagedata><tw-passagedata pid="12" name="Wait 5" tags="" position="750,675" size="100,100">
-option 5
-
-Time remaining: $time hours
-
-
-(link: &quot;I heard a knock from the door&quot;)[
-    (set: $time to $time - 10)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Family Arrives&quot;)
-    ]
-]
-</tw-passagedata><tw-passagedata pid="13" name="Family Arrives" tags="" position="375,825" size="100,100">
-
-spend quality time
-
-Time remaining: $time hours
-
-
-(link: &quot;I heard a knock from the door&quot;)[
-    (set: $time to $time - 18)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Family Arrives&quot;)
-    ]
-]
-</tw-passagedata><tw-passagedata pid="14" name="House" tags="" position="1675,350" size="100,100">For a moment you take in the gravity of the situation. as you glance around your apartment you find you eyes searching for a hint of how to spend this day, what you can do that won&#39;t leaving you filled with regret?
-
-Time remaining: $time hours
-
-(link: &quot;leather-bound book&quot;)[
-    (set: $time to $time - 5)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Driving&quot;)
-    ]
-]
-(link: &quot;painting of Lake Tyrell&quot;)[
+For a moment you take in the gravity of the situation. As you glance around your apartment you find your eyes searching for what to do while you wait for you dad, and the rest of your family you assume, what you can do that won&#39;t leaving you filled with regret.(link: &quot;Maybe clean up&quot;)[
     (set: $time to $time - 2)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Driving&quot;)
+        (goto: &quot;Clean F&quot;)
     ]
-]
-(link: &quot;Alchohol Cabinet&quot;)[
-    (set: $time to $time - 5)
+]the apartments in a bit of a mess after last night’s party, and you’re having guests over after all? Perhaps you should (link: &quot;write something&quot;)[
+    (set: $time to $time - 2)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Driving&quot;)
+        (goto: &quot;Will F&quot;)
     ]
-]
-(link: &quot;Computer&quot;)[
-    (set: $time to $time - 5)
+], to the people you won’t get to see. Looking through some (link: &quot;old photographs&quot;)[
+    (set: $time to $time - 2)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Driving&quot;)
+        (goto: &quot;Memory F&quot;)
+    ]
+] might be worth doing, or maybe just a (link: &quot;stiff drink&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Drink F&quot;)
+    ]
+] to brace yourself for what you’re sure will be a very emotional family reunion. </tw-passagedata><tw-passagedata pid="8" name="Clean F" tags="" position="225,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+Thinking on it for a moment, you realise that your place could really use a tidy up. besides, this being your final day won’t stop your mother from biting your ear off for leaving your home in such a state. So, you get to work, dusting and spraying every surface you can think of that could use it. Strangely you find yourself enjoying the moment, the soft tranquil mundanity of the task you set yourself to grounding you to reality. Just as the dirt and grim begin to wash away, so do all your worries and regrets. After all, you have not enough time to spend it on regret. 
+
+(link: &quot;You hear a knock from the door&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Family Arrives&quot;)
     ]
 ]
-</tw-passagedata><tw-passagedata pid="15" name="Driving" tags="" position="1125,425" size="100,100">
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="9" name="Will F" tags="" position="375,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+Wanting to leave something behind for when you’re gone, you grab a fresh notebook from your shelf and begin to write. For the first time in your whole life, you don’t need to struggle to find the right words, it all comes flowing out of you, one letter after another. You tell your friends and family you love them, dividing up your belongings among them, assuring them that you lived a good life and you wish all of them lived long happy lives. That’s the sort of thing you write in wills, right? With the final closing regards you stare at the notebook, all it pages now covered in your thoughts and feelings and feel a sense of relief knowing some trace of you will be left after you are gone.
+
+(link: &quot;You hear a knock from the door&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Family Arrives&quot;)
+    ]
+]
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="10" name="Memory F" tags="" position="500,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+You walk to the shelf, taking out the large photo album you got from your mother a couple years ago.  She always used to say that photos were a way to relive life’s greatest moments.  Seeing how you feel you could use some reminiscing; you flick through the pages carefully examining and reflecting on every photo. From the one of you in diapers, to the one at your high school graduation, birthday parties, and every small moment in between. 
+
+(link: &quot;You hear a knock from the door&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Family Arrives&quot;)
+    ]
+]
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="11" name="Drink F" tags="" position="625,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+Deciding that a nice drink will be just the thing to take the edge off, you walk to the kitchen and open up the cupboard trying to decide which drink best suits the occasion. After thinking for a little while, you arrive at the perfect choice. A single malt scotch, a gift from your grandfather from your 18th. You were saving it for a special occasion, but you guess now is as good of a time as you’re going to get. So, you grab a glass pull up a chair and enjoy it, slowly savouring every sip.
+
+(link: &quot;You hear a knock from the door&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Family Arrives&quot;)
+    ]
+]
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="12" name="Family 2" tags="" position="375,1125" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+You catch your breath to take the sight in. Your mom and uncle cooking up a storm while gossiping about the usual family drama, you cousins sitting around coffee table playing board game they found on the living room shelf, your dad and grandpa drinking by the balcony in silence. You talk to every one of them, just little stuff. As if this is like any other family function. When foods ready, you find as many chairs and tables as possible to create a large seating area, where everyone can sit and mingle while enjoying the food. Before you dig in, your father raises a glass and toasts you, wishing you safe travels. You’re the only one to notice his eyes beginning to water as he holds back tears. (link: &quot;You dig in to the final supper&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Family 3&quot;)
+    ]
+]
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="13" name="Family Arrives" tags="" position="375,1000" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+You hear a knock on the door. Upon answering, the force of you mothers hug as she greets you hello in enough to knock the wind out of you. While catching your breath, you see your family members slowly pile into your modest apartment, siblings, cousins, uncles, aunties even your grandfather. Before you can begin to ask, you dad stepping through last gives a warm hug, saying loud so all can hear that they couldn’t let me leave for my trip without throwing a going away party. playing along you gladly thank everyone for coming, telling them to get the (link: &quot;party started.&quot;)[
+    (set: $time to $time - 2)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Family 2&quot;)
+    ]
+    </tw-passagedata><tw-passagedata pid="14" name="House" tags="" position="1625,25" size="100,100">
+&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+For a moment you take in the gravity of the situation. as you glance around your apartment you find you eyes searching for a hint of how to spend this day, what you can do that won&#39;t leaving you filled with regret?
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}
+
+
+(live: 300s)[
+    (go-to: &quot;Panic&quot;)
+]
+
+</tw-passagedata><tw-passagedata pid="15" name="Driving" tags="" position="675,400" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/Travel-medium.jpeg&quot;/&gt;
 
 Your eyes lock onto the paiting hanging above the couch left behind by the previous tenant,one you&#39;ve seen almost everytime you come home. You always wanted to go to the lake, not just from what you imagine is the quite serenity and gorgeous view that no doubt occupies it, but because out there, away from all the suffocating city lights, You can get a look at the un-filtered night sky. //must be one hell of a view//. It would take all day to get there, but you&#39;re determined to see it. You pack a bag, only needing the essentials, and start heading to your destination. 
@@ -277,7 +294,7 @@ Time remaining: $time hours
     ]
 ]
 
-</tw-passagedata><tw-passagedata pid="16" name="arriving at lake" tags="" position="1125,550" size="100,100">
+</tw-passagedata><tw-passagedata pid="16" name="arriving at lake" tags="" position="675,525" size="100,100">
 It was a long drive. At points you had to blare music through the radio just to keep yourself going. But finally you get there, with a few hours left to spare. Getting out of the Car you quickly grab a bottle of liquor, food and cigarettes. After all, wouldn&#39;t want to be distracted by that gorgeous view by thinking how much you could use a sandwhich. And after a couple minutes of hiking, taking a moment every now and then to catch your breath, 
 
 (link: &quot;you can finally see what you came here for&quot;)[
@@ -290,7 +307,7 @@ It was a long drive. At points you had to blare music through the radio just to 
     ]
 ]
 
-Time remaining: $time hours</tw-passagedata><tw-passagedata pid="17" name="View of the Stars" tags="" position="1125,675" size="100,100">
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="17" name="View of the Stars" tags="" position="675,650" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/laketyrell.jpeg&quot;/&gt;
 You get the view you were looking for. it is beautiful. you lie down against a large oak tree, slowly filling your mouth with food and liquor ensuring to savour every last sensation of flavour. Perhaps you could have done more today, but maybe this was enough, the final thing you seen in this world will be one that your lucky enough to see in a lifetime. 
 
@@ -330,7 +347,175 @@ type();
   &lt;p&gt;by Daniel V&lt;/p&gt;
 
   (link: &quot;Begin&quot;)[ (goto: &quot;Begin&quot;) ]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Will" tags="" position="1500,225" size="100,100">(link: &quot;Pick up the Phone &quot;)[
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Will" tags="" position="1500,275" size="100,100">Wanting to leave something behind for when you’re gone, you grab a fresh notebook from your shelf and begin to write. For the first time in your whole life, you don’t need to struggle to find the right words, it all comes flowing out of you, one letter after another. You tell your friends and family you love them, dividing up your belongings among them, assuring them that you lived a good life and you wish all of them lived long happy lives. //That’s the sort of thing you write in wills, right//? With the final closing regards you stare at the notebook, all it pages now covered in your thoughts and feelings and feel a sense of relief knowing some trace of you will be left after you are gone.
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="21" name="Drugs 2" tags="" position="1300,275" size="100,100">
+Not feeling anything, you decide to grab a couple more, thinking that you might’ve just had a high tolerance. You quickly realise that isn’t the case as the first batch hits, followed swiftly by the extra-large second dose. Your sense of time and space become warped, a giddy energy consuming you. The next you remember, you’re on the floor of your bathroom, a couple pills clutched in your left hand. Well, that feeling was certainly something. [[maybe just one more]]
+
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="22" name="Stop" tags="" position="1300,400" size="100,100">
+Deciding not to risk it, you stop with what you had. Later on, you feel a weightless sensation, as if you know everything’s going to turn out ok. That little pick me up will keep you in a good mood the rest of the day. 
+
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="23" name="Burn Time" tags="" position="1625,275" size="100,100">Despite having all the freedom, you find yourself in a state of choice-paralysis, unsure how best to spend the day, or whether there is anything you really want to do. Deciding it might be best to use some time doing ‘nothing’ you go through the motions, scrolling social media, wander around while listening to music, grabbing a bite to eat. Just spending the day like you would on any other day. After an hour or so, you feel more grounded, and a little less stressed. Now, what to do?
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="24" name="Sleep" tags="" position="1750,275" size="100,100">Despite knowing you have so little time you can’t shake how tired you are. The ache in your joints, the heaviness of your eyelids, the fog that lays over your head making it so hard to feel motivated to do anything. You realise perhaps what you need is a bit more sleep, time spend allowing your mind and body to rest, so that you can truly appreciate the time left instead of fighting to stay awake. Curling up under the covers, it only takes a moment to fall asleep. Waking up, you feel refreshed, ready to get the day moving.
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="25" name="Drugs" tags="" position="1300,150" size="100,100">
+
+While you’ve never been one to partake, you always figured you wanted to try some once before you died. Luckily, you had some in the apartment from when your ex used to stay here and decide to sample the merchandise.  Bracing yourself, to pop one. A few minutes go by, nothing. (link: &quot;Maybe you need a couple more?&quot;)[
+    (set: $time to $time - 0.5)
+    (if: $time &lt;= 0)[
+        (goto: &quot;Drugs 2&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Answer call&quot;)
+    ]
+]or (link: &quot;Maybe just leave it there&quot;)[
+    (set: $time to $time - 0.5)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;stop&quot;)
+    ]
+]
+</tw-passagedata><tw-passagedata pid="26" name="Spoiler Dive" tags="" position="1875,275" size="100,100">A random thought occurs to. You’ve watched a lot of shows and movies in your life, and read even more books. But thinking now, there are still so many you’ll never get to experience, so many series half finished with endings yet to discover. Feeling a sudden flash of inspiration, you open your laptop, diving through videos, articles and wiki pages, looking for every spoiler you can. Some make you cry, some make you mad. But most leave you feeling satisfied, the feeling of loose ends slowly being tied up. after hours of scrolling, you realise there isn’t any other spoilers you’re interested in knowing, and shut the laptop closed. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="27" name="Outside" tags="" position="1675,600" size="100,100">Looking around your apartment, you decide there are plenty of things out there that you can’t do staying here. Grabbing what you think you might need, you head out the door, unsure whether you’ll ever step foot back inside. Walking the streets of the town, you wonder where you should head to.
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="28" name="Answer call" tags="" position="375,425" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+Deciding to at least he him out, you answer the call with a courteous hello. Without skipping a beat he jumps into conversation, asking how you’ve been and explaining what your mom has been doing that drives him crazy. Straight out of the parent conversation handbook. After a couple of minutes of back and forth, he asks how you are. You realise this is final moment to tell him what’s happening, though you’re unsure whether you should 
+(link: &quot;tell him whats happening &quot;)[
     (set: $time to $time - 0.5)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
@@ -338,175 +523,401 @@ type();
     (else:)[
         (goto: &quot;Truth&quot;)
     ]
-]
-
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="21" name="Drugs 2" tags="" position="1400,675" size="100,100">(link: &quot;Pick up the Phone &quot;)[
+]or instead (link: &quot;keep it to yourself &quot;)[
     (set: $time to $time - 0.5)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Lie&quot;)
     ]
-]
+]</tw-passagedata><tw-passagedata pid="29" name="Lie" tags="" position="500,425" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="22" name="Drugs 3" tags="" position="1400,800" size="100,100">(link: &quot;Pick up the Phone &quot;)[
+You tell you father everything’s okay, not entirely sure whether you even believe it. You think its best that the last time you spend with your family isn&#39;t them in hysteria over the fact you’re going to die. You close your heart to the scenario &#39;that’s not how I want to spend my last day&#39;. After few more words exchanged back and forth, he tells you he’s gotta go, and that he hopes to catch up with you soon. You tell him you love him, the last words he will ever hear from you, and hang up the phone. 
+
+(link: &quot;now what do I do?&quot;)[
     (set: $time to $time - 0.5)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;House&quot;)
     ]
 ]
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="30" name="Family 3" tags="" position="375,1250" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="23" name="Normalcy" tags="" position="1625,225" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
+As the night draws to a close, every says there goodbye, wishing you safe travels and to see them when you get back. After your mom kisses you goodbye, you dad pulls you aside to the balcony for a final chat. For a while you, no words are said and by the time he works up the courage to say anything you stop him. “I love you too, dad” Is all you can think to say. With a final embrace he leaves with your mom, as there isn’t anything else more important to say. You look around the apartment, the board games still out, tables lined up and dishes piled. Getting to see them one last time has made you content, and leaving you without regret. (link: &quot; Now to clean up the mess.&quot;)[
+    (set: $time to $time - 50)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Family 3&quot;)
     ]
 ]
+Time remaining: 20 Seconds</tw-passagedata><tw-passagedata pid="31" name="Memory Lane" tags="" position="1500,150" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="24" name="Sleep" tags="" position="1750,225" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
+You walk to the shelf, taking out the large photo album you got from your mother a couple years ago.  She always used to say that photos were a way to relive life’s greatest moments.  Seeing how you feel you could use some reminiscing; you flick through the pages carefully examining and reflecting on every photo. From the one of you in diapers, to the one at your high school graduation, birthday parties, and every small moment in between. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="32" name="Watch Film" tags="" position="1625,150" size="100,100">
+
+Suddenly a movie comes to your mind, a movie you had always loved to watch. You watched it so many times as a kid, that the DVD eventually wore out forcing you to beg your parents for another copy. Grabbing a few snacks from the pantry and a couple of cans from the fridge you set yourself for the perfect viewing experience. As your eyes are filled with the same characters and views you’ve seen near a hundred times, part of your wishes you could be their alongside them. At least then, maybe you could live a little longer. But eventually the credits roll and the movie ends. Now what?
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="33" name="Read Book" tags="" position="1750,150" size="100,100">
+Out of all the books you’ve read, this one is without a doubt your favourite. You take it off the bookshelf, its pages yellowed from the years and white cracks trailing up the spine from many uses. It’s been read so many times you feel you could recite of memory alone. But the great thing about stories is how they always seem to change every time you read them. You spend ours pouring over every word on every page, stopping only for bathroom breaks and the occasional bite to eat. And when the final page is flipped, you almost feel the urge to read it again. But then you think better of it as it might be best to spend your remaining time on something else. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="34" name="Video Game" tags="" position="1875,150" size="100,100">
+Before doing anything else, there is one task you refuse to leave unfinished.  And that’s beating the game you’ve recently been playing. You know this game is notoriously difficult, and have spent the last few weeks putting your skills to the test.  And now, all that’s left is the final boss. It takes hundreds of tries but finally, with sweat running down your back and your fingers beginning to tire, you find the pattern, take that final swing, and scream in triumph as you see the final screen, ‘Foe vanquished’. Victory has never tasted so sweet, and as the credits roll you feel a sense of accomplishment, knowing you didn’t let this game beat you.
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="35" name="Eat Food" tags="" position="1500,400" size="100,100">Seeing as this is your last day, you reckon that calls for a last meal. By some stroke of, your able to scrounge up enough ingredients to make your favourite meal. Slaving away in the kitchen, carefully using every ingredient to its exact measurement, boiling and frying at exactly the right temperature you finally complete the dish. You savour every bite, an explosion of flavour shocking your tastebuds and leaving yourself quite impressed with your skills. And in respect for the cook’s effort, leave not a single morsel on the plate. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="36" name="Play Music" tags="" position="1625,400" size="100,100">Looking around, your eyes land on something in the corner. A thin line of dust coated over the aged wood, the piano that belonged to your grandmother has been largely unused the past few years. You always loved to play, the many memories spent learning from her and playing for your friends and family when they came over fill your mind as you carefully move the assorted junk placed onto it and open the lid. Intuitively, your fingers glide across the keys, a soft melody filling the room. Hours glide past as you find yourself unable to stop the flow of music pouring out of you. Until finally you feel your fingers begin to ache, as you grind to a halt, silence filling the room once more. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="37" name="Gardening" tags="" position="1750,400" size="100,100">While pacing, you realise that there I still one thing you need to do before you shuffle of this mortal coil. That would be taking care of your house plants. After all you weren’t sure the next time some would be by, and figured you were the only resident that needed to die today. So, you get to work, watering the plants that needed it, and replotting the rest. when you’re finished, they all look vibrant and colourful just the way you like them.
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="38" name="Demolish" tags="" position="1875,400" size="100,100">As you pace around the apartment, you accidentally knock over a lamp causing it to shatter. You let out a curse and begin to pick the pieces up. but then a sudden thought occurs to you. What’s the point of cleaning up if I’m not gonna be around tomorrow? You drop the pieces back on the floor, looking for what else to break. You flip over chairs, grab dishes and other things that will feeling satisfising to smash across the floor and walls. Rage fills you entire being, the unfairness of your situation consuming you. Until you can’t find anything else to throw, your meticulously crafted home in shambles, yet you feel lighter than ever. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="39" name="Panic" tags="" position="800,400" size="100,100">
+You try to rack your brain for what to do, thinking of how you should spend the day before you…. Die. Youre dying, and there’s nothing you can do about. No one can save you, hell there’s a good chance no one will believe you. How are you supposed to spend a final day on earth? that’s too much pressure.
+What do you do? What do you do? What do you do? What do you do?
+What do you do?
+What do you do?
+What do you do?
+
+//You spend the day spiralling, failing to distract yourself from the impending end. //
+
+(link: &quot;Its over &quot;)[
+    (set: $time to $time - 30)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Answer call&quot;)
     ]
 ]
 
 (live: 10s)[
     (go-to: &quot;Keep it a secret&quot;)
 ]
-</tw-passagedata><tw-passagedata pid="25" name="Drugs" tags="" position="1400,550" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
+</tw-passagedata><tw-passagedata pid="40" name="Back Home" tags="" position="1750,25" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+
+You head back to your apartment, thinking there might still be some things you want to do in the old place. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Will&quot;))[(link: &quot;Will Writing &quot;)[(set: $time to $time - 4)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Will&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Memory Lane&quot;))[(link: &quot;Photo book&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Memory Lane&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Watch Film&quot;))[(link: &quot;Watch film &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Watch Film&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Read Book&quot;))[(link: &quot;Read Book &quot;)[(set: $time to $time - 5)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Read Book&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Video Game&quot;))[(link: &quot;Play Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Video Game&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Eat Food&quot;))[(link: &quot;Eat Food    &quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Eat Food&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Drugs&quot;))[(link: &quot;Take Drugs&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Drugs&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Play Music&quot;))[(link: &quot;Play Music&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Play Music&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Gardening&quot;))[(link: &quot;Gardening&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Gardening&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Demolish&quot;))[(link: &quot;Demolish&quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Demolish&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Driving&quot;))[(link: &quot;Lake Tyrell&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Driving&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Spoiler Dive&quot;))[(link: &quot;Spoiler Dive&quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Spoiler Dive&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Sleep a bit  &quot;)[(set: $time to $time - 4)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Sleep&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Outside &quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Outside&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}
+
+
+(live: 300s)[
+    (go-to: &quot;Panic&quot;)
+]
+
+</tw-passagedata><tw-passagedata pid="41" name="Work" tags="" position="1500,725" size="100,100">while walking, you finding yourself outside of your work. And even though this is your last day, something about spending it like any other feels right to you. Luckily you make it just in time for your shift, and before you know are going through the motions of any other shift. You enjoy time in the breakroom spent with your co-workers’ sharing stories about the crazy encounters they’ve had to deal with, and enjoy seeing the smiles of all the satisfied customers when they leave the store. Before heading out your boss gives you a pat on the back, thanking you for another’s days hard work, and saying he’ll see you tomorrow. You smile, and leave. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="42" name="Park" tags="" position="1625,725" size="100,100">
+You go to the park, a regular part of your routine on your days off. As you walk you take everything in from the luscious trees to the crystal-clear waters of the lake. All sorts of people are in the park. A group of people doing their yoga, small groups or pairs jogging the path, even a couple bikers and families having a picnic. So many people, all with many moments left ahead of them. Feeling a desire to run, as you often do through the park, you start heading forward with no particular path in mind, simply hoping to outrun your thoughts.
+
+After a couple minutes, you pass a lady sitting on a bench, looking as though she was recently crying. you wonder if you should (link: &quot;see whats wrong&quot;)[
+    (set: $time to $time - 2)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Clean F&quot;)
     ]
-]
-
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="26" name="spoiler dive" tags="" position="1875,225" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
+] or  (link: &quot;continue running.&quot;)[
+    (set: $time to $time - 2)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Clean F&quot;)
     ]
 ]
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="27" name="Outside" tags="" position="2025,600" size="100,100">
-a
-b
-c
-d
-e
+</tw-passagedata><tw-passagedata pid="43" name="Beach" tags="" position="1750,725" size="100,100">
+You find yourself at the beach the nice sea air cooling your face after a long walk. Finding a little spot to yourself, you sit and admire the vastness of the ocean, occasionally taking out a snack and running your hands through the sand and watch it fall. You wonder how long it would take to swim to another shore past the horizon, and even consider trying for a moment. Taking off your shoes and sock you walk to the shoreline, feeling the sand beneath you and the waves come up to your knees. //It really is an amazing view//. 
 
-(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="44" name="Restaurant" tags="" position="1875,725" size="100,100">
+Wanting to enjoy some quality food, you head to the most expensive restaurant in town, the one you’ve always been too worried about the prices to go to. Seeing as how that’s no longer an issue you head right in, securing a nice table by the window. You take your time ordering your food and drink, deciding on a full course meal. Every bite is filled with years of cooking experience that can be tasted in every bite, allowing to fully appreciate the large price tag. After clearing the plates of any food and downing the last sip of wine, you generously tip your server requesting the give your compliments to the chef. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="45" name="Stadium" tags="" position="1500,850" size="100,100">Your initial plans for the day were to go watch your team play at the local stadium, and seeing as how you still have your ticket decide to head over before the game starts. Luckily you manage to sit as the starting siren blares, marking the commencing of your final match. In-between quarters you find yourself chatting to fellow supporters and opposing fans alike, making comments on the quality of the umpires calls and the players performance.  The game is close, each second having you at the edge of your seat, but in the last moments the opposing team scores a game-saving goal. While the rest of the spectators around you erupt in joy or sadness, you calmly get out of your seat and exit the arena. //Ah well, can’t win them all.//
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="46" name="Friends Place" tags="" position="2100,600" size="100,100"></tw-passagedata><tw-passagedata pid="47" name="Friends Place 2" tags="" position="2100,725" size="100,100"></tw-passagedata><tw-passagedata pid="48" name="Friends Place 3" tags="" position="2100,850" size="100,100"></tw-passagedata><tw-passagedata pid="49" name="Help" tags="" position="1625,850" size="100,100">Even though you have so little time left, you can’t bear the thought of leaving someone who you could help.  Walking over and taking a seat, you ask her if she’s ok and if she would like someone to talk to. Initially, she turns you down saying she doesn’t feel like talking right now. When you reply that you’ll wait for when she’s ready, she eventually begins to speak. And you listen, letting her tell you everything that she’s been struggling with until she runs out of things to say. After a minute in silene she says thanks you and walks away. While you can’t say for sure if your life was spent doing things that mattered, this moment feels like it was. 
+
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
+
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="50" name="Run" tags="" position="1625,975" size="100,100">
+On any other day you would go and help, but today you only have so much time, so you keep running. You run without any other thoughts in your head, only conscious of the feeling of your feet touching the ground and the wind rushing past you. Eventually you find yourself having made a lap of the entire park, and wonder if you should keep going.
+[[keep running]] 
+[[Stop yourself]]
+</tw-passagedata><tw-passagedata pid="51" name="keep running" tags="" position="1525,1100" size="100,100">
+You exit the park keep going. All the houses, cars and people blur as you quicken your pace, pushing yourself to go faster than you’ve ever run before. Maybe if I just keep running, I can outrun the fact I’m going to die. But eventually you feel your feet give and you tumble, all the energy and momentum coming to a grinding halt. When you dust yourself off, you find yourself in the middle of nowhere, no remnants of any visible landmarks to guide you back home. The nights come, so you only have probably a little bit of time left anyway. So you find a nice spot to lie down, and (link: &quot;close your eyes.&quot;)[
+    (set: $time to $time - 18)
     (if: $time &lt;= 0)[
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Truth&quot;)
+        (goto: &quot;Clean F&quot;)
     ]
 ]
+Time remaining: 10 seconds</tw-passagedata><tw-passagedata pid="52" name="Stop yourself" tags="" position="1725,1100" size="100,100">
+You stop yourself, feeling that you can’t run away from your problems. Instead of running till your heart gives out, you reckon your time could be spent doing something else.
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="28" name="Friend 1" tags="" position="1900,650" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Truth&quot;)
-    ]
-]
+Time remaining: $time hours
+{
+&lt;div class=&quot;menu-grid&quot;&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Work&quot;))[(link: &quot; Go to Work &quot;)[(set: $time to $time - 7)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Work&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Park&quot;))[(link: &quot;Visit Park&quot;)[(set: $time to $time - 1)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Park&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="29" name="Dinner with a friend" tags="" position="2175,525" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Truth&quot;)
-    ]
-]
+&lt;/div&gt;
+}</tw-passagedata><tw-passagedata pid="53" name="maybe just one more" tags="" position="1175,400" size="100,100">losing all sense of rational, a desiring to feel that experience again, you take the last few pills. But somethings wrong, your body can’t take to as begin to break out into sweats, your vision blurring. And suddenly
 
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
+(live: 6s)[
+    (go-to: &quot;GameOver&quot;)
 ]
-</tw-passagedata><tw-passagedata pid="30" name="Partying" tags="" position="2175,650" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Truth&quot;)
-    ]
-]
-
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="31" name="walk" tags="" position="2025,475" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Truth&quot;)
-    ]
-]
-
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="32" name="Friend 2" tags="" position="1900,775" size="100,100">(link: &quot;Pick up the Phone &quot;)[
-    (set: $time to $time - 0.5)
-    (if: $time &lt;= 0)[
-        (goto: &quot;GameOver&quot;)
-    ]
-    (else:)[
-        (goto: &quot;Truth&quot;)
-    ]
-]
-
-(live: 10s)[
-    (go-to: &quot;Keep it a secret&quot;)
-]
-</tw-passagedata><tw-passagedata pid="33" name="Game" tags="" position="2175,775" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
