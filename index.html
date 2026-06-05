@@ -77,7 +77,9 @@ Time remaining: $time hours
 </tw-passagedata><tw-passagedata pid="2" name="GameOver" tags="" position="150,275" size="100,100">
 And eveything fades to black. You hope you&#39;ve spent your time wisely
  
-(link: &quot;Restart&quot;)[(goto: &quot;Title&quot;)]</tw-passagedata><tw-passagedata pid="3" name="Begin" tags="" position="500,275" size="100,100">&lt;div id=&quot;typewriter&quot;&gt;&lt;/div&gt;
+(link: &quot;Restart&quot;)[(goto: &quot;Title&quot;)]
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Clock.mp3&quot; autoplay loop&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="3" name="Begin" tags="" position="500,275" size="100,100">&lt;div id=&quot;typewriter&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
 const text = &quot;You have one day left. Thats it. This isn&#39;t from some ancient curse or divine will. You just woke up one day and knew the time had come. You simply have one more day, that&#39;s all. If you knew you had so little time left...... How would you use it?&quot;;
@@ -328,7 +330,8 @@ Time remaining: $time hours
         (goto: &quot;Family Arrives&quot;)
     ]
 ]
-</tw-passagedata><tw-passagedata pid="18" name="Title" tags="" position="375,275" size="100,100">
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Drive.mp3&quot; autoplay loop&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="18" name="Title" tags="" position="375,275" size="100,100">
 &lt;div class=&quot;title-screen&quot;&gt;
   &lt;h1&gt;One More Day&lt;/h1&gt;
   &lt;p&gt;by Daniel V&lt;/p&gt;
@@ -708,7 +711,10 @@ Time remaining: $time hours
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
 &lt;/div&gt;
-}</tw-passagedata><tw-passagedata pid="36" name="Gardening" tags="" position="1750,400" size="100,100">
+}
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Piano.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="36" name="Gardening" tags="" position="1750,400" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/Garden.jpg&quot;/&gt;
 
 While pacing, you realise that there I still one thing you need to do before you shuffle of this mortal coil. That would be taking care of your house plants. After all you weren’t sure the next time some would be by, and figured you were the only resident that needed to die today. So, you get to work, watering the plants that needed it, and replotting the rest. when you’re finished, they all look vibrant and colourful just the way you like them.
@@ -852,7 +858,9 @@ After a couple minutes, you pass a lady sitting on a bench, looking as though sh
         (goto: &quot;Run&quot;)
     ]
 ]
-Time remaining: $time hours</tw-passagedata><tw-passagedata pid="42" name="Beach" tags="" position="1750,725" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Beach.jpg&quot;/&gt;
+Time remaining: $time hours
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Park.mp3&quot; autoplay loop&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="42" name="Beach" tags="" position="1750,725" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Beach.jpg&quot;/&gt;
 
 You find yourself at the beach the nice sea air cooling your face after a long walk. Finding a little spot to yourself, you sit and admire the vastness of the ocean, occasionally taking out a snack and running your hands through the sand and watch it fall. You wonder how long it would take to swim to another shore past the horizon, and even consider trying for a moment. Taking off your shoes and sock you walk to the shoreline, feeling the sand beneath you and the waves come up to your knees. //It really is an amazing view//. 
 
@@ -901,7 +909,9 @@ Time remaining: $time hours
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
 &lt;/div&gt;
-}</tw-passagedata><tw-passagedata pid="45" name="Friends Place" tags="" position="1750,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Friend.jpg&quot;/&gt;
+}
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Stadium.mp3&quot; autoplay loop&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="45" name="Friends Place" tags="" position="1750,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Friend.jpg&quot;/&gt;
 
 If others were to be in your situation, there first instinct would probably be surrounded by family in your final moments. But looking back through the years, there has always been a group of people who were there for you when you needed them, and gave you the ability to keep moving forward. So, knowing it’s your last day, you want to be able to spend just a little bit more time with them. Despite you dropping by his house unannounced, you best friend welcomes you with his usual cheshire cat grin and asks [[what brings you by?]] </tw-passagedata><tw-passagedata pid="46" name="Help" tags="" position="1625,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpg&quot;/&gt;
 
