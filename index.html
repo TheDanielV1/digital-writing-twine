@@ -295,6 +295,8 @@ Time remaining: $time hours
 ]
 
 </tw-passagedata><tw-passagedata pid="16" name="arriving at lake" tags="" position="675,525" size="100,100">
+&lt;img class=&quot;story-image&quot; src=&quot;./images/Travel-medium.jpeg&quot;/&gt;
+
 It was a long drive. At points you had to blare music through the radio just to keep yourself going. But finally you get there, with a few hours left to spare. Getting out of the Car you quickly grab a bottle of liquor, food and cigarettes. After all, wouldn&#39;t want to be distracted by that gorgeous view by thinking how much you could use a sandwhich. And after a couple minutes of hiking, taking a moment every now and then to catch your breath, 
 
 (link: &quot;you can finally see what you came here for&quot;)[
@@ -503,6 +505,7 @@ Time remaining: $time hours
 &lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Beach&quot;))[(link: &quot;Go to Beach &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Beach&quot;) ] ]]&lt;/div&gt;
 &lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Restaurant&quot;))[(link: &quot;Restaurant &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Restaurant&quot;) ] ]]&lt;/div&gt;
 &lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Stadium&quot;))[(link: &quot;Watch Game &quot;)[(set: $time to $time - 3)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Stadium&quot;) ] ]]&lt;/div&gt;
+&lt;div class=&quot;menu-button&quot;&gt;(if:not (visited: &quot;Friends Place&quot;))[(link: &quot;Friends  &quot;)[(set: $time to $time - 2)(set: $phoneVisited to true)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Friends Place&quot;) ] ]]&lt;/div&gt;
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Back Home&quot;)[(set: $time to $time - 0.5)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Back Home&quot;) ] ]]&lt;/div&gt;
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
@@ -821,6 +824,7 @@ Time remaining: $time hours
 }</tw-passagedata><tw-passagedata pid="41" name="Park" tags="" position="1625,725" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpeg&quot;/&gt;
 
+
 You go to the park, a regular part of your routine on your days off. As you walk you take everything in from the luscious trees to the crystal-clear waters of the lake. All sorts of people are in the park. A group of people doing their yoga, small groups or pairs jogging the path, even a couple bikers and families having a picnic. So many people, all with many moments left ahead of them. Feeling a desire to run, as you often do through the park, you start heading forward with no particular path in mind, simply hoping to outrun your thoughts.
 
 After a couple minutes, you pass a lady sitting on a bench, looking as though she was recently crying. you wonder if you should (link: &quot;see whats wrong&quot;)[
@@ -829,7 +833,7 @@ After a couple minutes, you pass a lady sitting on a bench, looking as though sh
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Clean F&quot;)
+        (goto: &quot;Help&quot;)
     ]
 ] or  (link: &quot;continue running.&quot;)[
     (set: $time to $time - 2)
@@ -837,11 +841,10 @@ After a couple minutes, you pass a lady sitting on a bench, looking as though sh
         (goto: &quot;GameOver&quot;)
     ]
     (else:)[
-        (goto: &quot;Clean F&quot;)
+        (goto: &quot;Run&quot;)
     ]
 ]
-
-</tw-passagedata><tw-passagedata pid="42" name="Beach" tags="" position="1750,725" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Beach.jpeg&quot;/&gt;
+Time remaining: $time hours</tw-passagedata><tw-passagedata pid="42" name="Beach" tags="" position="1750,725" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Beach.jpeg&quot;/&gt;
 
 You find yourself at the beach the nice sea air cooling your face after a long walk. Finding a little spot to yourself, you sit and admire the vastness of the ocean, occasionally taking out a snack and running your hands through the sand and watch it fall. You wonder how long it would take to swim to another shore past the horizon, and even consider trying for a moment. Taking off your shoes and sock you walk to the shoreline, feeling the sand beneath you and the waves come up to your knees. //It really is an amazing view//. 
 
@@ -890,7 +893,7 @@ Time remaining: $time hours
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
 &lt;/div&gt;
-}</tw-passagedata><tw-passagedata pid="45" name="Friends Place" tags="" position="2100,600" size="100,100"></tw-passagedata><tw-passagedata pid="46" name="Friends Place 2" tags="" position="2100,725" size="100,100"></tw-passagedata><tw-passagedata pid="47" name="Friends Place 3" tags="" position="2100,850" size="100,100"></tw-passagedata><tw-passagedata pid="48" name="Help" tags="" position="1625,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpeg&quot;/&gt;
+}</tw-passagedata><tw-passagedata pid="45" name="Friends Place" tags="" position="1750,850" size="100,100">If others were to be in your situation, there first instinct would probably be surrounded by family in your final moments. But looking back through the years, there has always been a group of people who were there for you when you needed them, and gave you the ability to keep moving forward. So, knowing it’s your last day, you want to be able to spend just a little bit more time with them. Despite you dropping by his house unannounced, you best friend welcomes you with his usual cheshire cat grin and asks [[what brings you by?]] </tw-passagedata><tw-passagedata pid="46" name="Help" tags="" position="1625,850" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpeg&quot;/&gt;
 
 Even though you have so little time left, you can’t bear the thought of leaving someone who you could help.  Walking over and taking a seat, you ask her if she’s ok and if she would like someone to talk to. Initially, she turns you down saying she doesn’t feel like talking right now. When you reply that you’ll wait for when she’s ready, she eventually begins to speak. And you listen, letting her tell you everything that she’s been struggling with until she runs out of things to say. After a minute in silene she says thanks you and walks away. While you can’t say for sure if your life was spent doing things that mattered, this moment feels like it was. 
 
@@ -906,12 +909,12 @@ Time remaining: $time hours
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
 &lt;/div&gt;
-}</tw-passagedata><tw-passagedata pid="49" name="Run" tags="" position="1625,975" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpeg&quot;/&gt;
+}</tw-passagedata><tw-passagedata pid="47" name="Run" tags="" position="1625,975" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpeg&quot;/&gt;
 
 On any other day you would go and help, but today you only have so much time, so you keep running. You run without any other thoughts in your head, only conscious of the feeling of your feet touching the ground and the wind rushing past you. Eventually you find yourself having made a lap of the entire park, and wonder if you should keep going.
 [[keep running]] 
 [[Stop yourself]]
-</tw-passagedata><tw-passagedata pid="50" name="keep running" tags="" position="1525,1100" size="100,100">
+</tw-passagedata><tw-passagedata pid="48" name="keep running" tags="" position="1525,1100" size="100,100">
 You exit the park keep going. All the houses, cars and people blur as you quicken your pace, pushing yourself to go faster than you’ve ever run before. Maybe if I just keep running, I can outrun the fact I’m going to die. But eventually you feel your feet give and you tumble, all the energy and momentum coming to a grinding halt. When you dust yourself off, you find yourself in the middle of nowhere, no remnants of any visible landmarks to guide you back home. The nights come, so you only have probably a little bit of time left anyway. So you find a nice spot to lie down, and (link: &quot;close your eyes.&quot;)[
     (set: $time to $time - 18)
     (if: $time &lt;= 0)[
@@ -921,7 +924,7 @@ You exit the park keep going. All the houses, cars and people blur as you quicke
         (goto: &quot;Clean F&quot;)
     ]
 ]
-Time remaining: 10 seconds</tw-passagedata><tw-passagedata pid="51" name="Stop yourself" tags="" position="1725,1100" size="100,100">
+Time remaining: 10 seconds</tw-passagedata><tw-passagedata pid="49" name="Stop yourself" tags="" position="1725,1100" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/Park.jpeg&quot;/&gt;
 
 You stop yourself, feeling that you can’t run away from your problems. Instead of running till your heart gives out, you reckon your time could be spent doing something else.
@@ -938,14 +941,25 @@ Time remaining: $time hours
 &lt;div class=&quot;menu-button&quot;&gt;[(link: &quot;Burn Time&quot;)[(set: $time to $time - 1)(if: $time &lt;= 0)[(goto: &quot;GameOver&quot;)](else:)[(goto: &quot;Burn Time&quot;) ] ]]&lt;/div&gt;
 
 &lt;/div&gt;
-}</tw-passagedata><tw-passagedata pid="52" name="maybe just one more" tags="" position="1175,400" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+}</tw-passagedata><tw-passagedata pid="50" name="maybe just one more" tags="" position="1175,400" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
 losing all sense of rational, a desiring to feel that experience again, you take the last few pills. But somethings wrong, your body can’t take to as begin to break out into sweats, your vision blurring. And suddenly
 
 (live: 6s)[
     (go-to: &quot;GameOver&quot;)
 ]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="51" name="what brings you by?" tags="" position="1875,850" size="100,100">It takes you a moment to put it into words, you don’t have much experience telling people something as serious as your dying, but the whole time he listens without interruption. After you’ve told him, he calmly walks over to you, gives you a long hug before asking what you’d like to do. At first his reaction surprises you, but thinking back, it was moments like this that made him your best friend. You tell him to call as many of your friends as he can, because all you want to do is spend some time with the [[people closest to you.]] </tw-passagedata><tw-passagedata pid="52" name="people closest to you." tags="" position="2000,850" size="100,100">
+Not everyone answers the calls and texts you send out, and you frankly expected that to happen. But what you didn’t expect was how many of them were willing to trop everything and come over to see you, even the ones who didn’t believe that you were dying. Your mum always told you growing up that the measure of a person was who they choose to surround themselves with. And if these kind, funny, amazing people came to you when you needed them most, you must’ve done something right. And by the time everyone has arrived, you’ve already felt happier than words can express. 
+
+You spend the rest of the day happier than you’ve felt in a long time. You play games, have a couple drinks, fire up the barbeque and cook up a feast to enjoy for the evening. And best of all your friends don’t treat you like you are made of glass. Instead treat you how they always do, like your just another one of the boys.  When you feel the time drawing near, you shout at the top of your lungs //thank you for loving me //and take (link: &quot;one last swig of liquor&quot;)[
+    (set: $time to $time - 15)
+    (if: $time &lt;= 0)[
+        (goto: &quot;GameOver&quot;)
+    ]
+    (else:)[
+        (goto: &quot;Answer call&quot;)
+    ]
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
