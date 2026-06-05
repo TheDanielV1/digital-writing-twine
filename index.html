@@ -60,7 +60,9 @@ tw-passage img {
     border: 1px solid #888;
     border-radius: 4px;
     font-size: 13px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Apartment" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="Apartment" position="650,275" size="100,100">(set: $time to 14)
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Apartment" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="Apartment" position="650,275" size="100,100">(set: $time to 14)
 
 &lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
@@ -94,7 +96,10 @@ type();
 (live: 14s)[
     (link: &quot;Time to make it count&quot;)[ (goto: &quot;Start&quot;) ]
 ]
-}</tw-passagedata><tw-passagedata pid="4" name="phone call" tags="Apartment" position="800,275" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
+}
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Clock.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="4" name="phone call" tags="Apartment" position="800,275" size="100,100">&lt;img class=&quot;story-image&quot; src=&quot;./images/apartment-medium.jpeg&quot;/&gt;
 
 You look over and your heart sinks, staring at the contact on the screen - &quot;Dad&quot;. Its been a year since you have last seen him, and your last interaction didn&#39;t exactly leave you on the best of terms. but he&#39;s still your dad, and this might be the last time you have a chance to talk to him.
 (link: &quot;Pick up the Phone &quot;)[
@@ -329,7 +334,10 @@ Time remaining: $time hours
   &lt;p&gt;by Daniel V&lt;/p&gt;
 
   (link: &quot;Begin&quot;)[ (goto: &quot;Begin&quot;) ]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Will" tags="" position="1500,275" size="100,100">
+&lt;/div&gt;
+
+&lt;audio id= &quot;bgm&quot; src=&quot;audio/Clock.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Will" tags="" position="1500,275" size="100,100">
 &lt;img class=&quot;story-image&quot; src=&quot;./images/Will.jpg&quot;/&gt;
 
 Wanting to leave something behind for when you’re gone, you grab a fresh notebook from your shelf and begin to write. For the first time in your whole life, you don’t need to struggle to find the right words, it all comes flowing out of you, one letter after another. You tell your friends and family you love them, dividing up your belongings among them, assuring them that you lived a good life and you wish all of them lived long happy lives. //That’s the sort of thing you write in wills, right//? With the final closing regards you stare at the notebook, all it pages now covered in your thoughts and feelings and feel a sense of relief knowing some trace of you will be left after you are gone.
@@ -967,7 +975,7 @@ You spend the rest of the day happier than you’ve felt in a long time. You pla
     (else:)[
         (goto: &quot;Answer call&quot;)
     ]
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="53" name="hal.tracks" tags="" position="250,75" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
